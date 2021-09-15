@@ -5,7 +5,7 @@ package by.mkstudio.sfgdi.controllers;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import by.mkstudio.sfgdi.services.GreetingServiceImpl;
+import by.mkstudio.sfgdi.services.ConstructorGreetingService;
 
 class ConstructorInjectedControllerTest {
 	
@@ -13,7 +13,7 @@ class ConstructorInjectedControllerTest {
 
 	@BeforeEach
 	void setUp() throws Exception {
-		controller = new ConstructorInjectedController(new GreetingServiceImpl());
+		controller = new ConstructorInjectedController(new ConstructorGreetingService());
 	}
 
 	@Test

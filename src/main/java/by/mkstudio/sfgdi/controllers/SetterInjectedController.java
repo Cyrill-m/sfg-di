@@ -1,6 +1,7 @@
 package by.mkstudio.sfgdi.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 import by.mkstudio.sfgdi.services.GreetingService;
@@ -9,7 +10,8 @@ import by.mkstudio.sfgdi.services.GreetingService;
 public class SetterInjectedController {
 
 	private GreetingService greetingService;
-
+	
+	@Qualifier("setterGreetingServices")
 	@Autowired
 	public void setGreetingService(GreetingService greetingService) {
 		this.greetingService = greetingService;
